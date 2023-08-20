@@ -1,0 +1,95 @@
+.container{
+  width: 80%;
+  margin:120px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.container .users{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: -70px;
+  width: 70%;
+}
+.container .users h2{
+  font-weight: bolder;
+  font-size: 30px;
+  font-style:oblique;
+  position: relative;
+}
+.container .users h2::before{
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: #070;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .users a{
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #45433bd8;
+}
+table{ 
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 15px rgba(64,64,64,.2);
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  width: 70%;
+}
+
+th{
+  background-color: #45433bd8;
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+td,
+th{
+  padding: 15px 20px;
+  text-align: center;
+}
+td a{
+  /* text-transform: capitalize; */
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+td a:first-child{
+  background-color: #700;
+}
+td a:nth-child(2){
+  background-color: #070;
+}
+td a:last-child{
+  background-color: #007;
+}
+tr{
+  width: 100%;
+  background-color: #fafafa;
+}
+tr:nth-child(even){
+  background-color: #eeeeee;
+}
+
+@media (max-width:540px) {
+  .container .users h2{
+    font-size: 20px;
+  }
+  table{
+    width: 90%;
+  }
+}
